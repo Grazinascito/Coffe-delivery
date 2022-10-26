@@ -1,18 +1,7 @@
-import { createStitches } from "@stitches/react";
+import { globalCss } from "@stitches/react";
 
-createStitches({
-  theme: {
-    colors: {
-      purpleDark: "#4B2995",
-      purple: "#8047F8",
-      purpleLight: "#EBE5F9",
-      YellowDark: "#C47F17",
-      Yellow: "#DBAC2C",
-      YellowLight: "#F1E9C9",
-    },
-
-    fontSizes: {
-        
-    },
-  },
+export const globalStyles = globalCss({
+  "*": { margin: 0, padding: 0, boxSizing: "border-box" },
+  html: { fontSize: "62.5%" },
+  body: { fontSize: "1.6rem" },
 });

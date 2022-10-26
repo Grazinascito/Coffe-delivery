@@ -1,7 +1,10 @@
+import { Wrapper } from "./Styles";
+
 export const Header = () => {
   return (
     <>
-      <header>blabaala</header>
+      <Wrapper>blabaala</Wrapper>
+      <p>alsdkasdsa</p>
     </>
   );
 };
