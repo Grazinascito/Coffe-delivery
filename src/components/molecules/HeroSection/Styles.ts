@@ -1,5 +1,5 @@
 import { styled } from "@stitches/react";
-import background from "../../assets/background.png";
+import background from "../../../assets/background.png";
 
 export const Wrapper = styled("section", {
   height: "54.4rem",

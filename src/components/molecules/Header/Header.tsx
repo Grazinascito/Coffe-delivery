@@ -1,7 +1,7 @@
 import { Wrapper, Location, Cart, WrapRightInfo } from "./Styles";
-import logo from "../../assets/logo.svg";
-import map_pin_fill from "../../assets/icons/map-pin-fill.svg";
-import shopping_cart_fill from "../../assets/icons/shopping-cart-fill.svg";
+import logo from "../../../assets/logo.svg";
+import map_pin_fill from "../../../assets/icons/map-pin-fill.svg";
+import shopping_cart_fill from "../../../assets/icons/shopping-cart-fill.svg";
 
 export const Header = () => {
   return (
