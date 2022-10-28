@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import { Header } from "../components/Header/Header";
+import { HeroSection } from "../components/HeroSection/HeroSection";
 import { globalStyles } from "../styles/global";
 
 export const Layout = () => {
@@ -7,6 +8,7 @@ export const Layout = () => {
   return (
     <>
       <Header />
+      <HeroSection />
       <Outlet />
     </>
   );
