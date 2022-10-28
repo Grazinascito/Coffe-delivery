@@ -24,7 +24,7 @@ createStitches({
     },
 
     fonts: {
-      baloo: "Baloo 2",
+      baloo: "Baloo 2, cursive",
       roboto: "Roboto",
     },
   },
