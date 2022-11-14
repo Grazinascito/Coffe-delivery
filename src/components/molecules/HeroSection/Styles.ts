@@ -2,18 +2,29 @@ import { styled } from "@stitches/react";
 import background from "../../../assets/background.png";
 
 export const Wrapper = styled("section", {
-  height: "54.4rem",
-  backgroundImage: `url(${background})`,
-  padding: "9.4rem 9rem",
+  height: "45.4rem",
+  padding: "5.2rem 16rem 0",
   display: "grid",
   gridTemplateColumns: "50% 50%",
   gap: "4rem",
+  position: "relative",
+
+  "&::before": {
+    content: "",
+    backgroundImage: `url(${background})`,
+    position: "absolute",
+    top: "0px",
+    right: "0px",
+    bottom: "0px",
+    left: "0px",
+    opacity: "0.7",
+  },
 });
 
 export const WrapHeroText = styled("div", {
   h1: {
     fontSize: "$titleXL",
-    fontFamily: "$baloo",
+    fontFamily: "$roboto",
     color: "#272221",
     marginBottom: "1.6rem",
   },

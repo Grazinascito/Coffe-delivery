@@ -4,6 +4,7 @@ createStitches({
   theme: {
     colors: {
       gray: "#F3F2F2",
+      grayFill: "#8D8686",
       purpleDark: "#4B2995",
       purple: "#8047F8",
       purpleLight: "#EBE5F9",
@@ -26,7 +27,7 @@ createStitches({
     },
 
     fonts: {
-      baloo: "Baloo 2, cursive",
+      baloo: "Baloo",
       roboto: "Roboto",
     },
   },

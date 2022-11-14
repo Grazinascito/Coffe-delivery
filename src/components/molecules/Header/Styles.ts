@@ -39,4 +39,12 @@ export const Cart = styled("button", {
   backgroundColor: "$yellowLight",
   borderRadius: "6px",
   cursor: "pointer",
+
+  variants: {
+    color: {
+      true: {
+        backgroundColor: "$purpleDark",
+      },
+    },
+  },
 });
