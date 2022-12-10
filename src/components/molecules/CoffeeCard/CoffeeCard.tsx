@@ -22,17 +22,15 @@ export const CoffeeCard = () => {
       {cards.map((items: cardsProps) => {
         return (
           <WrapperContent>
-            <>
-              <ImageCoffe src={items.img} alt={items.titleCard} />
-              <ListCoffeeStyles>
-                {items.coffeeType.map((i) => (
-                  <CoffeeType>{i}</CoffeeType>
-                ))}
-              </ListCoffeeStyles>
-              <h3>{items.titleCard}</h3>
-              <Description>{items.description}</Description>
-              <AddToCart />
-            </>
+            <ImageCoffe src={items.img} alt={items.titleCard} />
+            <ListCoffeeStyles>
+              {items.coffeeType.map((i) => (
+                <CoffeeType>{i}</CoffeeType>
+              ))}
+            </ListCoffeeStyles>
+            <h3>{items.titleCard}</h3>
+            <Description>{items.description}</Description>
+            <AddToCart />
           </WrapperContent>
         );
       })}

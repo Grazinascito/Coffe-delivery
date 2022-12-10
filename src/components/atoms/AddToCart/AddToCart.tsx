@@ -4,11 +4,15 @@ import { Button, WrapButtons, Wrapper } from "./Styles";
 import minusIcon from "../../../assets/minusplus/minus.svg";
 import plusIcon from "../../../assets/minusplus/plus.svg";
 
-export const AddToCart = () => {
+interface AddToCartProps {
+  price: String;
+}
+
+export const AddToCart = ({ price }: AddToCartProps) => {
   return (
     <Wrapper>
       <div>
-        R$ <span>9,90</span>
+        R$ <span>9.90</span>
       </div>
       <WrapButtons>
         <Button>
