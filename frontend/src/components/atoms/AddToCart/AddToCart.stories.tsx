@@ -16,5 +16,5 @@ const Template: ComponentStory<typeof AddToCart> = (args) => (
 export const Sample = Template.bind({});
 
 Sample.args = {
-  price: "9.9",
+  price: 9.9,
 };

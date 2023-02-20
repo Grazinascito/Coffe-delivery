@@ -10,21 +10,28 @@ import {
 import { cards } from "../../../utils/CardData/cardData";
 
 interface cardsProps {
-  coffeeType: string[];
-  titleCard: string;
-  description: string;
-  img: string;
+  id?: string;
+  coffeeType?: string[];
+  titleCard?: string;
+  description?: string;
+  img?: string;
+  price?: number;
+  handleFilteredCards?: Function;
 }
 
-export const CoffeeCard = () => {
+export const CoffeeCard = ({ handleFilteredCards }: cardsProps) => {
+  const filteredCards = handleFilteredCards?.();
+
+  const renderCards = filteredCards.length > 0 ? filteredCards : cards;
+
   return (
     <Wrapper>
-      {cards.map((item) => {
+      {renderCards.map((item: cardsProps) => {
         return (
           <WrapperContent>
             <ImageCoffe src={item.img} alt={item.titleCard} />
             <ListCoffeeStyles>
-              {item.coffeeType.map((i) => (
+              {item.coffeeType?.map((i) => (
                 <CoffeeType>{i}</CoffeeType>
               ))}
             </ListCoffeeStyles>

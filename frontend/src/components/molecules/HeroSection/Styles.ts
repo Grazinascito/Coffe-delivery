@@ -2,12 +2,10 @@ import { styled } from "@stitches/react";
 import background from "../../../assets/background.png";
 
 export const Wrapper = styled("section", {
-  height: "45.4rem",
   padding: "5.2rem 16rem 0",
   display: "grid",
   gridTemplateColumns: "50% 50%",
   gap: "4rem",
-  position: "relative",
 
   "&::before": {
     content: "",
@@ -18,10 +16,12 @@ export const Wrapper = styled("section", {
     bottom: "0px",
     left: "0px",
     opacity: "0.7",
+    height: "50.4rem",
   },
 });
 
 export const WrapHeroText = styled("div", {
+  marginTop: "7rem",
   h1: {
     fontSize: "$titleXL",
     fontFamily: "$roboto",
@@ -37,7 +37,9 @@ export const WrapHeroText = styled("div", {
   },
 });
 
-export const WrapImage = styled("div", {});
+export const WrapImage = styled("div", {
+  marginTop: "7rem",
+});
 
 export const IconsInfo = styled("div", {
   display: "grid",

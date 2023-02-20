@@ -3,8 +3,11 @@ import { styled } from "@stitches/react";
 export const Wrapper = styled("header", {
   display: "flex",
   justifyContent: "space-between",
-  padding: "3.2rem 16rem",
+  padding: "2rem 16rem",
   width: "100%",
+  position: "fixed",
+  background: "white",
+  zIndex: 999,
 });
 
 export const WrapRightInfo = styled("div", {
@@ -39,6 +42,7 @@ export const Cart = styled("button", {
   backgroundColor: "$yellowLight",
   borderRadius: "6px",
   cursor: "pointer",
+  position: "relative",
 
   variants: {
     color: {
@@ -47,4 +51,21 @@ export const Cart = styled("button", {
       },
     },
   },
+});
+
+export const ItemCount = styled("div", {
+  padding: "5px",
+  width: "22px",
+  height: "22px",
+  borderRadius: "50%",
+  position: "absolute",
+  right: "-30%",
+  top: "-15%",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  backgroundColor: "$yellowDark",
+  color: "white",
+  fontFamily: "$roboto",
+  fontSize: "$regularS",
 });

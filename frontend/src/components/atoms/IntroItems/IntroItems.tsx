@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-interface IntroItemsProps {
+export interface IntroItemsProps {
   children: ReactNode;
   icons: string;
   alt: string;

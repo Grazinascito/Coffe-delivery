@@ -1,5 +1,8 @@
 import { styled } from "@stitches/react";
 
 export const Wrapper = styled("main", {
-  padding: "3.2rem 16rem",
+  widht: "120rem",
+  border: "1px solid red",
+  display: "flex",
+  justifyContent: "center",
 });

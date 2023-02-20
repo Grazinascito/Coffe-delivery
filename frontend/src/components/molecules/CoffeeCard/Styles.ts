@@ -1,8 +1,10 @@
 import { styled } from "@stitches/react";
 
 export const Wrapper = styled("div", {
-  display: "grid",
-  gridTemplateColumns: "1fr 1fr 1fr",
+  display: "flex",
+  justifyContent: "center",
+  flexWrap: "wrap",
+  gap: "32px",
 });
 
 export const WrapperContent = styled("div", {

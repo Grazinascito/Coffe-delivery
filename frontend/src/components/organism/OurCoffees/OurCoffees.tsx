@@ -1,11 +1,10 @@
 import { CoffeeCard } from "../../molecules/CoffeeCard/CoffeeCard";
 import { Wrapper } from "./Styles";
 
-export const OurCoffees = () => {
+export const OurCoffees = ({ handleFilteredCards }: (any)) => {
   return (
     <Wrapper>
-      <h2>Nossos cafés</h2>
-      <CoffeeCard />
+      <CoffeeCard handleFilteredCards={handleFilteredCards} />
     </Wrapper>
   );
 };
