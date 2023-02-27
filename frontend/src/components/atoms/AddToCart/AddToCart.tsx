@@ -3,11 +3,12 @@ import shopping_cart_purple from "../../../assets/icons/shopping_cart_purple.svg
 import { Button, WrapButtons, Wrapper } from "./Styles";
 import minusIcon from "../../../assets/minusplus/minus.svg";
 import plusIcon from "../../../assets/minusplus/plus.svg";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { totalItems } from "../../../context/context";
 
 interface AddToCartProps {
   price: number;
+  handleAddToCart?: () => void;
 }
 
 export const AddToCart = ({ price }: AddToCartProps) => {
@@ -17,13 +18,22 @@ export const AddToCart = ({ price }: AddToCartProps) => {
 
   const handleAddToCart = () => {
     setCartItem(count + cartItem);
+     //TODO: Unit Test localStorage 
+    if (cartItem !== null) {
+      localStorage.setItem("cartItem", (count + cartItem).toString());
+    }
+
     setCount(0);
   };
 
-  console.log(cartItem);
+  useEffect(() => {
+    const savedItems = localStorage.getItem("cartItem");
+    if (cartItem !== null && savedItems !== null) {
+      setCartItem(parseInt(savedItems!));
+    }
+  }, []);
 
   const decreaseOnlyPositiveNumbers = count > 0;
-
   return (
     <Wrapper>
       <div>
@@ -43,7 +53,7 @@ export const AddToCart = ({ price }: AddToCartProps) => {
             onClick={() => setCount(count + 1)}
           />
         </Button>
-        <Cart color>
+        <Cart color data-testid="add-to-cart">
           <img
             src={shopping_cart_purple}
             alt="Ir para carrinho"

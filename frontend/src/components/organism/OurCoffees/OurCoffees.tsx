@@ -1,7 +1,9 @@
 import { CoffeeCard } from "../../molecules/CoffeeCard/CoffeeCard";
 import { Wrapper } from "./Styles";
-
-export const OurCoffees = ({ handleFilteredCards }: (any)) => {
+interface OurCoffeesProps {
+  handleFilteredCards: () => void;
+}
+export const OurCoffees = ({ handleFilteredCards }: OurCoffeesProps) => {
   return (
     <Wrapper>
       <CoffeeCard handleFilteredCards={handleFilteredCards} />

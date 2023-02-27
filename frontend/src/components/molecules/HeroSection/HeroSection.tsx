@@ -8,6 +8,29 @@ import packing from "../../../assets/icons/packing.svg";
 
 import { IntroItems } from "../../atoms/IntroItems/IntroItems";
 
+const introItemsContent = [
+  {
+    text: "Compra simples e segura",
+    icon: cart2,
+    altText: "Icone de carrinho",
+  },
+  {
+    text: "Embalagem mantém o café intacto",
+    icon: packing,
+    altText: "Icone de sacola",
+  },
+  {
+    text: "Entrega rápida e rastreada",
+    icon: clock,
+    altText: "Icone de relógio",
+  },
+  {
+    text: "O café chega fresquinho até você",
+    icon: coffeeIcon,
+    altText: "Icone de café",
+  },
+];
+
 export const HeroSection = () => {
   return (
     <Wrapper>
@@ -19,18 +42,17 @@ export const HeroSection = () => {
         </span>
 
         <IconsInfo>
-          <IntroItems icons={cart2} alt="Icone de carrinho">
-            Compra simples e segura
-          </IntroItems>
-          <IntroItems icons={packing} alt="Icone de sacola">
-            Embalagem mantém o café intacto
-          </IntroItems>
-          <IntroItems icons={clock} alt="Icone de relógio">
-            Entrega rápida e rastreada
-          </IntroItems>
-          <IntroItems icons={coffeeIcon} alt="Icone de café">
-            O café chega fresquinho até você
-          </IntroItems>
+          {introItemsContent.map((item) => {
+            return (
+              <IntroItems
+                key={item.altText}
+                icons={item.icon}
+                alt={item.altText}
+              >
+                {item.text}
+              </IntroItems>
+            );
+          })}
         </IconsInfo>
       </WrapHeroText>
 

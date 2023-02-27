@@ -28,11 +28,11 @@ export const CoffeeCard = ({ handleFilteredCards }: cardsProps) => {
     <Wrapper>
       {renderCards.map((item: cardsProps) => {
         return (
-          <WrapperContent>
+          <WrapperContent key={item.id}>
             <ImageCoffe src={item.img} alt={item.titleCard} />
             <ListCoffeeStyles>
               {item.coffeeType?.map((i) => (
-                <CoffeeType>{i}</CoffeeType>
+                <CoffeeType key={i}>{i}</CoffeeType>
               ))}
             </ListCoffeeStyles>
             <h3>{item.titleCard}</h3>

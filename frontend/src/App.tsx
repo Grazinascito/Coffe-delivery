@@ -1,22 +1,21 @@
-import { useEffect } from "react";
-import "./services/miragejs";
 import { Routes, Route } from "react-router-dom";
 import { Layout } from "./Template/Layout";
 import "./styles/themes";
+import { CheckoutPage } from "./components/organism/CheckoutPage/CheckoutPage";
+import { globalStyles } from "./styles/global";
+
+import { MainLayout } from "./MainLayout";
 
 function App() {
-  useEffect(() => {
-    fetch("/api/coffees")
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-      });
-  }, []);
+  globalStyles();
 
   return (
     <>
       <Routes>
-        <Route path="/" element={<Layout />} />
+        <Route path="/" element={<Layout />}>
+          <Route path="/" element={<MainLayout />} />
+          <Route path="/checkout" element={<CheckoutPage />} />
+        </Route>
       </Routes>
     </>
   );
